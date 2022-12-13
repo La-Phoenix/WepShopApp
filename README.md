@@ -1,5 +1,14 @@
 # WeatherApp
 
+An app built with Angular using String as payment method.
+
+To run App:
+Go into projects directory,
+`npm i` && `ng serve` to view project on http://localhost:4200
+then
+`cd Server`
+run `npm i && npm run dev` to get the server running on http://localhost:4242
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Development server

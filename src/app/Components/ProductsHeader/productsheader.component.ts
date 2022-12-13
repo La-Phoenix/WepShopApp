@@ -9,6 +9,8 @@ export class ProductsHeaderComponent {
   sort = 'desc';
   itemsShowCount = 12;
   @Output() columnsCountChange = new EventEmitter<number>();
+  @Output() sortChange = new EventEmitter<string>();
+  @Output() itemsCountChange = new EventEmitter<number>();
 
   constructor() {}
 
@@ -16,10 +18,12 @@ export class ProductsHeaderComponent {
 
   onSortChange(value: string): void {
     this.sort = value;
+    this.sortChange.emit(value);
   }
 
   onItemsUpdated(count: number): void {
     this.itemsShowCount = count;
+    this.itemsCountChange.emit(count);
   }
 
   onColumnsUpdated(columns: number): void {
